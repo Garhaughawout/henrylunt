@@ -1,0 +1,6 @@
+# Exclude files too large for GitHub (>100 MB)
+HENRY LUNT/HenryLunt2/HenryLunt/Henry_Lunt/SUPPM-2017-1.pdf
+
+# Windows system files
+desktop.ini
+Thumbs.db

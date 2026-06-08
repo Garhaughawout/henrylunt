@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family — Henry Lunt</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .family-viewer-wrap { margin-top: 2rem; }
+    #family-viewer { width: 100%; height: 870px; border: 1px solid #ccc; border-radius: 4px; display: block; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biography.html">Biography</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="family.html" class="active">Family</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Henry Lunt Family</h1>
+    <p>Family trees for Henry Lunt, his four wives, and their descendants</p>
+  </div>
+
+  <main>
+
+    <div class="intro-box">
+      <p>Henry Lunt married four wives over the course of his life, in the practice of plural marriage
+      common among early members of The Church of Jesus Christ of Latter-day Saints. Together they
+      raised a large family whose descendants span many generations. Click any name below to view
+      the family tree document in the viewer.</p>
+      <p>
+        <a href="#" onclick="loadFamily('family/Henry_Lunt.pdf','Complete Henry Lunt Family Tree'); return false;"
+           class="btn">View Complete Family Tree PDF</a>
+      </p>
+    </div>
+
+    <!-- Henry's parents -->
+    <h2>Henry Lunt's Parents</h2>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.5rem;">
+      <div class="wife-section" style="flex:1; min-width:220px;">
+        <div class="wife-header">
+          <h3>Randle Lunt</h3>
+          <span class="dates">1766 – 1836</span>
+        </div>
+        <p style="font-size:0.9rem; color:#555; margin-bottom:0.8rem;">
+          Henry Lunt's father. Died 19 September 1836 in Badenhall, Staffordshire, England.
+        </p>
+        <a href="#" onclick="loadFamily('family/Lunt/Randle_Lunt_1766.pdf','Randle Lunt (1766)'); return false;"
+           class="btn">View Randle Lunt PDF</a>
+      </div>
+      <div class="wife-section" style="flex:1; min-width:220px;">
+        <div class="wife-header">
+          <h3>Anne Owen</h3>
+          <span class="dates">1781 – 1862</span>
+        </div>
+        <p style="font-size:0.9rem; color:#555; margin-bottom:0.8rem;">
+          Henry Lunt's mother. Died 7 March 1862 in Wybunbury, Cheshire, England.
+        </p>
+        <a href="#" onclick="loadFamily('family/Lunt/Anne_Owen.pdf','Anne Owen'); return false;"
+           class="btn">View Anne Owen PDF</a>
+      </div>
+    </div>
+
+    <!-- Wife 1: Ellen Whittaker -->
+    <h2>Wife 1 — Ellen Whittaker</h2>
+    <div class="wife-section">
+      <div class="wife-header">
+        <h3>Ellen Whittaker</h3>
+        <span class="dates">1830 – 1903</span>
+        <span class="married">Married: 25 March 1852, Parowan, Utah</span>
+      </div>
+      <p style="font-size:0.9rem; color:#555; margin-bottom:0.8rem;">
+        Henry's first wife. Ellen remained a devoted partner through the early pioneer years in
+        Cedar City, and later in Mexico where Henry's fourth wife, Sarah, cared for her in her
+        final years alongside Henry himself.
+      </p>
+      <a href="#" onclick="loadFamily('family/Ellen/Ellen.pdf','Ellen Whittaker Family Tree'); return false;"
+         class="btn" style="margin-right:0.5rem;">View Ellen's Family Tree</a>
+      <div class="child-links" style="margin-top:1rem;">
+        <strong style="font-size:0.82rem; font-family:Arial,sans-serif; color:#555; width:100%; margin-bottom:0.2rem;">
+          Known children:
+        </strong>
+        <span style="font-size:0.85rem; color:#666; font-style:italic;">
+          Ammon Lunt (1853–1870) &nbsp;&bull;&nbsp; Ann Lunt (1856–1865)
+        </span>
+      </div>
+    </div>
+
+    <!-- Wife 2: Mary Ann Wilson -->
+    <h2>Wife 2 — Mary Ann Wilson</h2>
+    <div class="wife-section">
+      <div class="wife-header">
+        <h3>Mary Ann Wilson</h3>
+        <span class="dates">1834 – 1910</span>
+        <span class="married">Married: 7 October 1857, Salt Lake City, Utah</span>
+      </div>
+      <p style="font-size:0.9rem; color:#555; margin-bottom:0.8rem;">
+        Henry's second wife. Mary Ann Wilson's family is documented in detail, with individual
+        records available for each of her children.
+      </p>
+      <a href="#" onclick="loadFamily('family/Mary_Ann/Mary_Ann_Wilson.pdf','Mary Ann Wilson Family Tree'); return false;"
+         class="btn">View Mary Ann's Family Tree</a>
+      <div class="child-links">
+        <strong style="font-size:0.82rem; font-family:Arial,sans-serif; color:#555; width:100%; margin-bottom:0.2rem;">
+          Children (click for individual records):
+        </strong>
+        <a href="#" onclick="loadFamily('family/Mary_Ann/M_Henrietta.pdf','Martha Henrietta Lunt'); return false;">Martha Henrietta</a>
+        <a href="#" onclick="loadFamily('family/Mary_Ann/Eva.pdf','Ellen Eva Wilson Lunt'); return false;">Ellen Eva</a>
+        <a href="#" onclick="loadFamily('family/Mary_Ann/Henry_W.pdf','Henry Whitaker Wilson Lunt'); return false;">Henry W.</a>
+        <a href="#" onclick="loadFamily('family/Mary_Ann/Florence.pdf','Florence Wilson Lunt'); return false;">Florence</a>
+        <a href="#" onclick="loadFamily('family/Mary_Ann/Violet.pdf','Violet Wilson Lunt'); return false;">Violet</a>
+        <a href="#" onclick="loadFamily('family/Mary_Ann/Randle.pdf','Randle Wilson Lunt'); return false;">Randle</a>
+        <a href="#" onclick="loadFamily('family/Mary_Ann/Maude.pdf','Alice Maude Wilson Lunt'); return false;">Maude</a>
+        <a href="#" onclick="loadFamily('family/Mary_Ann/William.pdf','William Wilson Lunt'); return false;">William</a>
+      </div>
+    </div>
+
+    <!-- Wife 3: Ann Cresswell Gower -->
+    <h2>Wife 3 — Ann Cresswell Gower</h2>
+    <div class="wife-section">
+      <div class="wife-header">
+        <h3>Ann Cresswell Gower</h3>
+        <span class="dates">1843 – 1914</span>
+        <span class="married">Married: 11 April 1863, Salt Lake City, Utah</span>
+      </div>
+      <p style="font-size:0.9rem; color:#555; margin-bottom:0.8rem;">
+        Henry's third wife. Ann Cresswell Gower bore a large family in Cedar City. Individual
+        descendant records are available for each child.
+      </p>
+      <a href="#" onclick="loadFamily('family/Ann/Ann_Cresswell_Gower.pdf','Ann Cresswell Gower Family Tree'); return false;"
+         class="btn" style="margin-right:0.5rem;">View Ann's Family Tree</a>
+      <a href="#" onclick="loadFamily('family/Ann/Bio/Ellen_history.pdf','Ellen History'); return false;"
+         class="btn">Ellen History (Bio)</a>
+      <div class="child-links">
+        <strong style="font-size:0.82rem; font-family:Arial,sans-serif; color:#555; width:100%; margin-bottom:0.2rem;">
+          Children (click for individual records):
+        </strong>
+        <a href="#" onclick="loadFamily('family/Ann/Jane.pdf','Jane Gower Lunt'); return false;">Jane</a>
+        <a href="#" onclick="loadFamily('family/Ann/Jemima.pdf','Jemima Gower Lunt'); return false;">Jemima</a>
+        <a href="#" onclick="loadFamily('family/Ann/Roselia.pdf','Roselia Gower Lunt'); return false;">Roselia</a>
+        <a href="#" onclick="loadFamily('family/Ann/Oscar.pdf','Oscar Gower Lunt'); return false;">Oscar</a>
+        <a href="#" onclick="loadFamily('family/Ann/Thomas.pdf','Thomas Amos Lunt'); return false;">Thomas</a>
+        <a href="#" onclick="loadFamily('family/Ann/Rachel.pdf','Rachel Ann Lunt'); return false;">Rachel</a>
+        <a href="#" onclick="loadFamily('family/Ann/Ellen.pdf','Ellen Gower Lunt'); return false;">Ellen</a>
+        <a href="#" onclick="loadFamily('family/Ann/George.pdf','George Albert Lunt'); return false;">George</a>
+      </div>
+    </div>
+
+    <!-- Wife 4: Sarah Ann Lunt -->
+    <h2>Wife 4 — Sarah Ann Lunt</h2>
+    <div class="wife-section">
+      <div class="wife-header">
+        <h3>Sarah Ann Lunt</h3>
+        <span class="dates">1858 – 1921</span>
+        <span class="married">Married: 16 January 1878, St. George, Utah</span>
+      </div>
+      <p style="font-size:0.9rem; color:#555; margin-bottom:0.8rem;">
+        Henry's fourth and youngest wife. Sarah was a remarkable woman who managed the hotel and
+        stage stop while Henry served a mission, cared for Henry and his other wives through old age,
+        and guided the family through the difficult exodus to Mexico. Her cheese-making in Colonia
+        Pacheco became famous in the region.
+      </p>
+      <a href="#" onclick="loadFamily('family/Sarah/Sarah_Ann_Lunt.pdf','Sarah Ann Lunt Family Tree'); return false;"
+         class="btn">View Sarah's Family Tree</a>
+      <div class="child-links">
+        <strong style="font-size:0.82rem; font-family:Arial,sans-serif; color:#555; width:100%; margin-bottom:0.2rem;">
+          Children (click for individual records):
+        </strong>
+        <a href="#" onclick="loadFamily('family/Sarah/Egerton.pdf','Egerton Lunt'); return false;">Egerton</a>
+        <a href="#" onclick="loadFamily('family/Sarah/Broughton.pdf','Broughton Lunt'); return false;">Broughton</a>
+        <a href="#" onclick="loadFamily('family/Sarah/Parley.pdf','Parley Lunt'); return false;">Parley</a>
+        <a href="#" onclick="loadFamily('family/Sarah/Edward.pdf','Edward Lunt'); return false;">Edward</a>
+        <a href="#" onclick="loadFamily('family/Sarah/Heaton.pdf','Heaton Lunt'); return false;">Heaton</a>
+        <a href="#" onclick="loadFamily('family/Sarah/frank_George.pdf','Frank George Lunt'); return false;">Frank George</a>
+        <a href="#" onclick="loadFamily('family/Sarah/Alma.pdf','Alma L Lunt'); return false;">Alma</a>
+        <a href="#" onclick="loadFamily('family/Sarah/Owen.pdf','Owen Lunt'); return false;">Owen</a>
+        <a href="#" onclick="loadFamily('family/Sarah/Clarence.pdf','Clarence L Lunt'); return false;">Clarence</a>
+      </div>
+    </div>
+
+    <!-- PDF Viewer -->
+    <div class="family-viewer-wrap">
+      <h2>Family Document Viewer</h2>
+      <p style="font-size:0.9rem; color:#555; margin-bottom:0.8rem;">
+        Click any name or button above to open its document here.
+      </p>
+      <div class="pdf-toolbar">
+        <span class="pdf-label" id="family-label">No document selected — click a name above to begin.</span>
+        <a id="family-open" href="family/Henry_Lunt.pdf" target="_blank" class="btn">Open in new tab ↗</a>
+      </div>
+      <iframe id="family-viewer" src="" title="Family tree viewer"
+              style="width:100%; height:870px; border:1px solid #ccc; border-radius:4px; display:block;"></iframe>
+      <p class="pdf-fallback">
+        PDF not loading?
+        <a id="family-fallback" href="#">Click here to open it directly.</a>
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Henry Lunt Family Organization</p>
+    <p>Jay M. Jones, Web Page Content Manager</p>
+    <p>Copyright &copy; 2024 Jay M. Jones &mdash; All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function loadFamily(path, label) {
+      document.getElementById('family-viewer').src    = path;
+      document.getElementById('family-open').href     = path;
+      document.getElementById('family-fallback').href = path;
+      document.getElementById('family-label').textContent = 'Viewing: ' + label;
+      document.getElementById('family-viewer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+
+</body>
+</html>

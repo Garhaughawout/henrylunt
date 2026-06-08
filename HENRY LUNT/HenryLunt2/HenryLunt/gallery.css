@@ -1,0 +1,33 @@
+﻿body 
+{
+  margin: 0px;
+  padding: 0px;
+  font-family: Sans-Serif;
+}
+
+#header
+{
+	float: left;
+	width: 100%;
+	height: 100px;
+	background-color: Navy;
+	color: White;
+	padding: 4px;
+	border: solid 2px black;
+	margin: 3px;
+	font-family:Arial Black;
+	font-weight:bolder;
+}
+
+.cell
+{
+  float: none;
+  width: 72px;
+  height: 72px;
+}
+
+.pano
+{
+  float: none;
+  height: 72px;
+}

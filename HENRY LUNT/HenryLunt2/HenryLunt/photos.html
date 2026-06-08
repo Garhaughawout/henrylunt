@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photos — Henry Lunt</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .photo-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .photo-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .photo-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .photo-card figcaption {
+      padding: 0.7rem 0.9rem;
+      font-size: 0.82rem;
+      color: #555;
+      font-style: italic;
+      border-top: 1px solid #f0ece3;
+    }
+    .photo-card a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Lightbox overlay */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 90vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+    #lightbox-caption {
+      color: #ccc;
+      font-style: italic;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    #lightbox-close {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biography.html">Biography</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="photos.html" class="active">Photos</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Photos &amp; Images</h1>
+    <p>Photographs of Henry Lunt, his family, and historical places</p>
+  </div>
+
+  <main>
+
+    <!-- Image gallery -->
+    <h2>Image Gallery</h2>
+    <p style="margin-bottom:1.5rem; color:#555; font-size:0.9rem;">Click any image to enlarge.</p>
+
+    <div class="photo-grid">
+
+      <figure class="photo-card" style="margin:0;">
+        <a href="#" onclick="openLightbox('Henry_Lunt/Henry_Lunt_B50F4_14.JPG','Portrait of Henry Lunt'); return false;">
+          <img src="Henry_Lunt/Henry_Lunt_B50F4_14.JPG" alt="Portrait of Henry Lunt">
+          <figcaption>Portrait of Henry Lunt</figcaption>
+        </a>
+      </figure>
+
+      <figure class="photo-card" style="margin:0;">
+        <a href="#" onclick="openLightbox('HenryLuntFamilyAtHomeInPachecoMexico.JPG','Henry Lunt Family at Home in Colonia Pacheco, Mexico'); return false;">
+          <img src="HenryLuntFamilyAtHomeInPachecoMexico.JPG" alt="Lunt Family at home in Pacheco Mexico">
+          <figcaption>Henry Lunt Family at Home in Colonia Pacheco, Mexico</figcaption>
+        </a>
+      </figure>
+
+      <figure class="photo-card" style="margin:0;">
+        <a href="#" onclick="openLightbox('HenryLunt200thBirthdayObservance.JPG','Henry Lunt 200th Birthday Observance'); return false;">
+          <img src="HenryLunt200thBirthdayObservance.JPG" alt="Henry Lunt 200th Birthday Observance">
+          <figcaption>Henry Lunt 200th Birthday Observance</figcaption>
+        </a>
+      </figure>
+
+      <figure class="photo-card" style="margin:0;">
+        <a href="#" onclick="openLightbox('HenryLunt-BriefLifeSketch.JPG','Henry Lunt Brief Life Sketch (document image)'); return false;">
+          <img src="HenryLunt-BriefLifeSketch.JPG" alt="Henry Lunt Brief Life Sketch" style="object-position:top;">
+          <figcaption>Brief Life Sketch document</figcaption>
+        </a>
+      </figure>
+
+      <figure class="photo-card" style="margin:0;">
+        <a href="#" onclick="openLightbox('Henry_Lunt/RecreationOfIronWorks.jpg','Recreation of the Cedar City Iron Works'); return false;">
+          <img src="Henry_Lunt/RecreationOfIronWorks.jpg" alt="Recreation of the Cedar City Iron Works">
+          <figcaption>Recreation of the Cedar City Iron Works</figcaption>
+        </a>
+      </figure>
+
+      <figure class="photo-card" style="margin:0;">
+        <a href="#" onclick="openLightbox('misc/hl_sig.jpg','Henry Lunt\'s Signature'); return false;">
+          <img src="misc/hl_sig.jpg" alt="Henry Lunt's Signature"
+               style="height:200px; object-fit:contain; background:#f9f5ee; padding:1rem;">
+          <figcaption>Henry Lunt's Signature</figcaption>
+        </a>
+      </figure>
+
+      <figure class="photo-card" style="margin:0;">
+        <a href="#" onclick="openLightbox('map.JPG','Map — Henry Lunt Era'); return false;">
+          <img src="map.JPG" alt="Map from the Henry Lunt era">
+          <figcaption>Map — Utah Territory / Henry Lunt era</figcaption>
+        </a>
+      </figure>
+
+    </div>
+
+    <!-- Photo archive (PDF) -->
+    <h2>Photo Archive PDF</h2>
+    <div class="intro-box">
+      <p>A comprehensive photo collection is available as a PDF document. Use the viewer below or
+      open the PDF in a new tab for the full-resolution version.</p>
+    </div>
+
+    <div class="pdf-links">
+      <a href="#" onclick="loadPhotoPdf('photos/Photos.pdf','Photo Collection'); return false;" class="active">
+        Photo Collection
+      </a>
+      <a href="#" onclick="loadPhotoPdf('photos/Photos.upto16Mar2023.pdf','Photo Collection (archive to 16 Mar 2023)'); return false;">
+        Archive (to Mar 2023)
+      </a>
+    </div>
+
+    <div class="pdf-toolbar">
+      <span class="pdf-label" id="photo-label">Viewing: Photo Collection</span>
+      <a id="photo-open" href="photos/Photos.pdf" target="_blank" class="btn">Open in new tab ↗</a>
+    </div>
+    <iframe id="photo-viewer" class="pdf-viewer" src="photos/Photos.pdf" title="Photo archive viewer"></iframe>
+    <p class="pdf-fallback">
+      PDF not loading?
+      <a id="photo-fallback" href="photos/Photos.pdf">Click here to open it directly.</a>
+    </p>
+
+    <!-- Statue section -->
+    <h2>The Henry Lunt Statue</h2>
+    <div class="intro-box">
+      <p>A statue of Henry Lunt commemorates his role as a founding pioneer of Cedar City, Utah.
+      Documentation and news coverage of the statue dedication are available below.</p>
+    </div>
+    <ul class="item-list">
+      <li>
+        <a href="Henry_Lunt/Henry_Lunt_statue.pdf" target="_blank">
+          <span class="icon">🗿</span>
+          <span>
+            <strong>Henry Lunt Statue — Documentation</strong>
+            <div class="desc">Official documentation of the Henry Lunt statue.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="Henry_Lunt/Henry_Lunt_statue_SLTrib.pdf" target="_blank">
+          <span class="icon">📰</span>
+          <span>
+            <strong>Henry Lunt Statue — Salt Lake Tribune</strong>
+            <div class="desc">Salt Lake Tribune news coverage of the statue dedication.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="Henry_Lunt/220323_CC-33_Henry_Lunt_Statue.pdf" target="_blank">
+          <span class="icon">📄</span>
+          <span>
+            <strong>Henry Lunt Statue (March 2023)</strong>
+            <div class="desc">Additional documentation from March 2023.</div>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>Henry Lunt Family Organization</p>
+    <p>Jay M. Jones, Web Page Content Manager</p>
+    <p>Copyright &copy; 2024 Jay M. Jones &mdash; All Rights Reserved</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox"
+       onclick="closeLightbox()">
+    <button id="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <script>
+    // Lightbox
+    function openLightbox(src, caption) {
+      var lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = caption;
+      document.getElementById('lightbox-caption').textContent = caption;
+      lb.classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.getElementById('lightbox-img').src = '';
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Photo PDF switcher
+    var activePhotoLink = document.querySelector('.pdf-links a.active');
+    function loadPhotoPdf(path, label, el) {
+      document.getElementById('photo-viewer').src   = path;
+      document.getElementById('photo-open').href    = path;
+      document.getElementById('photo-fallback').href = path;
+      document.getElementById('photo-label').textContent = 'Viewing: ' + label;
+    }
+  </script>
+
+</body>
+</html>

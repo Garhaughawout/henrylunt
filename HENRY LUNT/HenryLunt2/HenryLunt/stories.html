@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories — Henry Lunt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biography.html">Biography</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="stories.html" class="active">Stories</a></li>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Stories &amp; Historical Accounts</h1>
+    <p>Narratives of pioneer life connected to Henry Lunt and his family</p>
+  </div>
+
+  <main>
+
+    <div class="intro-box">
+      <p>The following stories and historical articles illuminate the life and times of Henry Lunt —
+      from a legendary Cedar City Christmas to the family's exodus to Mexico and the colourful
+      characters who crossed their path. Select any item to read it in the viewer below.</p>
+    </div>
+
+    <!-- Story selectors -->
+    <div class="pdf-links" id="story-tabs">
+      <a href="#" onclick="loadStory('stories/Christmas1852.pdf','Christmas 1852',this); return false;" class="active">
+        Christmas 1852
+      </a>
+      <a href="#" onclick="loadStory('stories/FamineInMexicoColoringBook.pdf','Coloring Book — Famine in Mexico',this); return false;">
+        Famine in Mexico (Coloring Book)
+      </a>
+      <a href="#" onclick="loadStory('stories/KaneVisitToLunts.pdf','Kane\'s Visit to the Lunts',this); return false;">
+        Kane's Visit to the Lunts
+      </a>
+      <a href="#" onclick="loadStory('stories/Rules-HenryLuntHousehold.pdf','Rules in the Henry Lunt Household',this); return false;">
+        Rules in the Household
+      </a>
+      <a href="#" onclick="loadStory('stories/SettlingOfCedarCity.pdf','Settling of Cedar City',this); return false;">
+        Settling of Cedar City
+      </a>
+      <a href="#" onclick="loadStory('stories/SarahAnnLunt.pdf','Sarah Ann Lunt',this); return false;">
+        Sarah Ann Lunt
+      </a>
+      <a href="#" onclick="loadStory('stories/Cedar_Mountain_Hideout.pdf','Cedar Mountain Hideout',this); return false;">
+        Cedar Mountain Hideout
+      </a>
+    </div>
+
+    <!-- Viewer -->
+    <div class="pdf-toolbar">
+      <span class="pdf-label" id="story-label">Viewing: Christmas 1852</span>
+      <a id="story-open" href="stories/Christmas1852.pdf" target="_blank" class="btn">Open in new tab ↗</a>
+    </div>
+    <iframe id="story-viewer" class="pdf-viewer" src="stories/Christmas1852.pdf" title="Story viewer"></iframe>
+    <p class="pdf-fallback">
+      PDF not loading?
+      <a id="story-fallback" href="stories/Christmas1852.pdf">Click here to open it directly.</a>
+    </p>
+
+    <!-- Descriptions -->
+    <h2>About These Stories</h2>
+    <ul class="item-list" style="margin-top:0;">
+      <li>
+        <a href="#" onclick="loadStoryFromList('stories/Christmas1852.pdf','Christmas 1852','story-tabs'); return false;">
+          <span class="icon">🎄</span>
+          <span>
+            <strong>Christmas 1852</strong>
+            <div class="desc">An account of Christmas celebrations in early Cedar City — the first winter in the new settlement.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadStoryFromList('stories/FamineInMexicoColoringBook.pdf','Coloring Book — Famine in Mexico','story-tabs'); return false;">
+          <span class="icon">📗</span>
+          <span>
+            <strong>Coloring Book — Famine in Mexico</strong>
+            <div class="desc">Illustrated by Karina Lewis. A visual account of the Lunt family's difficult years in Colonia Pacheco, Mexico.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadStoryFromList('stories/KaneVisitToLunts.pdf','Kane\'s Visit to the Lunts','story-tabs'); return false;">
+          <span class="icon">🤝</span>
+          <span>
+            <strong>Kane's Visit to the Lunts</strong>
+            <div class="desc">The story of Colonel Thomas L. Kane's remarkable visit to the Lunt family and his friendship with Utah pioneers.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadStoryFromList('stories/Rules-HenryLuntHousehold.pdf','Rules in the Henry Lunt Household','story-tabs'); return false;">
+          <span class="icon">📋</span>
+          <span>
+            <strong>Rules in the Henry Lunt Household</strong>
+            <div class="desc">A glimpse into the order, values, and expectations Henry Lunt maintained within his large pioneer family.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadStoryFromList('stories/SettlingOfCedarCity.pdf','Settling of Cedar City','story-tabs'); return false;">
+          <span class="icon">🏡</span>
+          <span>
+            <strong>Settling of Cedar City</strong>
+            <div class="desc">Pioneer Magazine, 2017, No. 1. Used with permission: Sons of Utah Pioneers. Henry Lunt's role in establishing Cedar City.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadStoryFromList('stories/SarahAnnLunt.pdf','Sarah Ann Lunt','story-tabs'); return false;">
+          <span class="icon">👩</span>
+          <span>
+            <strong>Sarah Ann Lunt</strong>
+            <div class="desc">Pioneer Magazine, 2018, No. 1. Used with permission: Sons of Utah Pioneers. The story of Henry's fourth wife and her remarkable life.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadStoryFromList('stories/Cedar_Mountain_Hideout.pdf','Cedar Mountain Hideout at Cook\'s Spring','story-tabs'); return false;">
+          <span class="icon">⛰️</span>
+          <span>
+            <strong>Cedar Mountain Hideout at Cook's Spring (Corry's Ranch)</strong>
+            <div class="desc">An account of Henry Lunt's time hiding at Cedar Mountain to avoid federal polygamy marshals.</div>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Extra Henry Lunt documents -->
+    <h2>Additional Documents</h2>
+    <ul class="item-list">
+      <li>
+        <a href="Henry_Lunt/Henry_Lunt_and_the_Founding.pdf" target="_blank">
+          <span class="icon">📄</span>
+          <span>
+            <strong>Henry Lunt and the Founding</strong>
+            <div class="desc">Historical document on Henry Lunt's role in founding Cedar City.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="Henry_Lunt/Henry_Lunt_statue.pdf" target="_blank">
+          <span class="icon">🗿</span>
+          <span>
+            <strong>Henry Lunt Statue</strong>
+            <div class="desc">Documentation of the Henry Lunt statue commemoration.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="Henry_Lunt/Henry_Lunt_statue_SLTrib.pdf" target="_blank">
+          <span class="icon">📰</span>
+          <span>
+            <strong>Henry Lunt Statue — Salt Lake Tribune</strong>
+            <div class="desc">Salt Lake Tribune article about the Henry Lunt statue.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="Henry_Lunt/Kane_visit_Lunts.pdf" target="_blank">
+          <span class="icon">📜</span>
+          <span>
+            <strong>Kane's Visit to the Lunts (alternate version)</strong>
+            <div class="desc">An additional account of the Kane family's notable visit.</div>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="Henry_Lunt/Henry_Lunt_Letter_1852.docx">
+          <span class="icon">✉️</span>
+          <span>
+            <strong>Henry Lunt's 1852 Letter</strong>
+            <div class="desc">A personal letter written by Henry Lunt in 1852 (Word document).</div>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>Henry Lunt Family Organization</p>
+    <p>Jay M. Jones, Web Page Content Manager</p>
+    <p>Copyright &copy; 2024 Jay M. Jones &mdash; All Rights Reserved</p>
+  </footer>
+
+  <script>
+    var activeStoryLink = document.querySelector('#story-tabs a.active');
+
+    function loadStory(path, label, el) {
+      document.getElementById('story-viewer').src    = path;
+      document.getElementById('story-open').href     = path;
+      document.getElementById('story-fallback').href = path;
+      document.getElementById('story-label').textContent = 'Viewing: ' + label;
+      if (activeStoryLink) activeStoryLink.classList.remove('active');
+      el.classList.add('active');
+      activeStoryLink = el;
+      document.getElementById('story-viewer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function loadStoryFromList(path, label) {
+      document.getElementById('story-viewer').src    = path;
+      document.getElementById('story-open').href     = path;
+      document.getElementById('story-fallback').href = path;
+      document.getElementById('story-label').textContent = 'Viewing: ' + label;
+      if (activeStoryLink) activeStoryLink.classList.remove('active');
+      activeStoryLink = null;
+      document.getElementById('story-viewer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+
+</body>
+</html>
