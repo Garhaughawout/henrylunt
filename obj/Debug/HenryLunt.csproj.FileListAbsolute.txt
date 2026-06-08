@@ -1,0 +1,10 @@
+D:\robert\web\HenryLunt\HenryLunt\bin\HenryLunt.dll.config
+D:\robert\web\HenryLunt\HenryLunt\bin\HenryLunt.dll
+D:\robert\web\HenryLunt\HenryLunt\bin\HenryLunt.pdb
+D:\robert\web\HenryLunt\HenryLunt\bin\System.Data.SQLite.dll
+D:\robert\web\HenryLunt\HenryLunt\bin\System.Data.SQLite.xml
+D:\robert\web\HenryLunt\HenryLunt\obj\Debug\HenryLunt.csproj.AssemblyReference.cache
+D:\robert\web\HenryLunt\HenryLunt\obj\Debug\HenryLunt.csproj.CoreCompileInputs.cache
+D:\robert\web\HenryLunt\HenryLunt\obj\Debug\HenryLunt.csproj.CopyComplete
+D:\robert\web\HenryLunt\HenryLunt\obj\Debug\HenryLunt.dll
+D:\robert\web\HenryLunt\HenryLunt\obj\Debug\HenryLunt.pdb

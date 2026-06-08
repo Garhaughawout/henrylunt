@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal — Henry Lunt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biography.html">Biography</a></li>
+      <li><a href="journal.html" class="active">Journal</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Henry Lunt's Journal</h1>
+    <p>Personal records from 1852 to 1859</p>
+  </div>
+
+  <main>
+
+    <div class="intro-box">
+      <p>Henry Lunt kept a personal journal recording his experiences as a pioneer in Utah, his
+      spiritual impressions, daily life in early Cedar City, and his mission to England. The
+      following journal segments are preserved and available for reading.</p>
+    </div>
+
+    <!-- Segment selector -->
+    <div class="pdf-links" id="journal-tabs">
+      <a href="#" onclick="loadJournal('journal/Journal_1852.pdf','Portion of Henry Lunt Journal — 1852',this); return false;" class="active">
+        Journal 1852
+      </a>
+      <a href="#" onclick="loadJournal('journal/Journal_1853.pdf','Portion of Henry Lunt Journal — 1853',this); return false;">
+        Journal 1853
+      </a>
+      <a href="#" onclick="loadJournal('journal/Mission_England_1854_1857.pdf','Mission to England and Return, 1854–1857',this); return false;">
+        Mission to England (1854–1857)
+      </a>
+      <a href="#" onclick="loadJournal('journal/Short_Entries_1858_1859.pdf','Short Entries for 1858 and 1859',this); return false;">
+        Short Entries 1858–1859
+      </a>
+    </div>
+
+    <!-- Viewer -->
+    <div class="pdf-toolbar">
+      <span class="pdf-label" id="journal-label">Viewing: Portion of Henry Lunt Journal — 1852</span>
+      <a id="journal-open" href="journal/Journal_1852.pdf" target="_blank" class="btn">Open in new tab ↗</a>
+    </div>
+    <iframe id="journal-viewer" class="pdf-viewer" src="journal/Journal_1852.pdf" title="Journal viewer"></iframe>
+    <p class="pdf-fallback">
+      PDF not loading?
+      <a id="journal-fallback" href="journal/Journal_1852.pdf">Click here to open it directly.</a>
+    </p>
+
+    <!-- Context -->
+    <h2>About the Journal</h2>
+    <div class="intro-box">
+      <p>Henry Lunt began his journal in 1852, shortly after arriving in Cedar City and marrying
+      his first wife, Ellen Whittaker. His entries from 1852 and 1853 capture the struggles and
+      triumphs of the early settlement period in southern Utah — including the famous
+      <em>Christmas 1852</em> observance that is also documented in the Stories section.</p>
+      <p>The Mission to England entries (1854–1857) record his service as a missionary in the land
+      of his birth. His later short entries from 1858–1859 reflect a more settled life back in
+      Cedar City.</p>
+      <p>Also see: <a href="Henry_Lunt/Henry_Lunt_Letter_1852.docx">A letter written by Henry Lunt in 1852 (Word document)</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Henry Lunt Family Organization</p>
+    <p>Jay M. Jones, Web Page Content Manager</p>
+    <p>Copyright &copy; 2024 Jay M. Jones &mdash; All Rights Reserved</p>
+  </footer>
+
+  <script>
+    var activeJournalLink = document.querySelector('#journal-tabs a.active');
+
+    function loadJournal(path, label, el) {
+      document.getElementById('journal-viewer').src    = path;
+      document.getElementById('journal-open').href     = path;
+      document.getElementById('journal-fallback').href = path;
+      document.getElementById('journal-label').textContent = 'Viewing: ' + label;
+      if (activeJournalLink) activeJournalLink.classList.remove('active');
+      el.classList.add('active');
+      activeJournalLink = el;
+    }
+  </script>
+
+</body>
+</html>

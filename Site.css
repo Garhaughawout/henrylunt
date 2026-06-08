@@ -1,0 +1,141 @@
+﻿body 
+{
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  color: #201856;
+}
+
+/*------------------------------------ structure ----------------------------------------------*/
+
+#header {
+    background-image: url('http://HenryLunt.org/HenryLuntFamilyAtHomeInPachecoMexico.jpg');
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 250px;
+    float: left;
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bolder;
+    position: relative;
+}
+
+#navigation
+{
+	width: 1590px;
+	height: 60px;
+	float: left;
+	background-color: #8AB7F1;
+	position: relative;
+}
+
+#content_small
+{
+	width: 1590px;
+	height: 200px;
+	font-family: Arial;
+	font-size: medium;
+	position: relative;
+	float: left;
+}
+
+#content_medium
+{
+	width: 1590px;
+	height: 300px;
+	font-family: Arial;
+	font-size: medium;
+	position: relative;
+	float: left;
+}
+
+#content_large
+{
+	width: 1590px;
+	height: 400px;
+	font-family: Arial;
+	font-size: medium;
+	position: relative;
+	float: left;
+}
+
+#content_Xlarge
+{
+	width: 1590px;
+	height: 775px;
+	font-family: Arial;
+	font-size: medium;
+	position: relative;
+	float: left;
+}
+
+#divider
+{
+	width: 1590px;
+	height: 60px;
+	float: left;
+	background-color: #8AB7F1;
+	position: relative;
+}
+
+#footer
+{
+	width: 1590px;
+	height: 30px;
+	font-family: Arial;
+	font-size: small;
+	float: left;
+	position: relative;
+}
+
+/*------------------------------------ navigation ---------------------------------------------*/
+
+div#navigation ul
+{
+	line-height: 30px;
+	white-space: nowrap; 
+}
+
+div#navigation li
+{
+	list-style-type: none;
+    display: inline;
+}
+
+div#navigation li a
+{
+	text-decoration: none;
+	padding: 7px 20px;              /* adjust second parameter to vary width of navigation buttons */
+	margin: 2px;                    /* spacing between buttons */
+}
+
+div#navigation li a:link
+{
+  background-color: #3B384E;   /* adjust this property value to change default color of navigation buttons */
+  color: #FFF;
+}
+
+div#navigation li a:visited
+{
+  background-color: #3B384E;   /* adjust this property value to change default color of navigation buttons */
+  color: #FFF;
+}
+
+div#navigation li a:hover
+{
+  background-color: #CECDD5;   /* adjust this property value to change default color of navigation buttons */
+  color: #000;
+}
+
+div#navigation li a:active
+{
+  background-color: #3B384E;   /* adjust this property value to change default color of navigation buttons */
+  color: #FFF;
+}
+
+
+/*-------------------------------------- html -------------------------------------------------*/
+
+
+
+

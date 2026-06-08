@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — Henry Lunt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biography.html">Biography</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Events &amp; Commemorations</h1>
+    <p>Family organization gatherings, reunions, and historical observances</p>
+  </div>
+
+  <main>
+
+    <div class="intro-box">
+      <p>The Henry Lunt Family Organization holds regular events to celebrate and preserve Henry
+      Lunt's legacy. Select a document below to view it in the reader.</p>
+    </div>
+
+    <!-- Document selector -->
+    <div class="pdf-links" id="event-tabs">
+      <a href="#" onclick="loadEvent('events/events.pdf','Current Events',this); return false;" class="active">
+        Current Events
+      </a>
+      <a href="#" onclick="loadEvent('events/events.pdf.upto16Jul2024.pdf','Events Archive — 19–20 Jul 2024',this); return false;">
+        Archive: Jul 2024 (19th–20th)
+      </a>
+      <a href="#" onclick="loadEvent('events/Henry_Lunt_and_the_Founding.pdf','Henry Lunt and the Founding',this); return false;">
+        Henry Lunt &amp; the Founding
+      </a>
+      <a href="#" onclick="loadEvent('events/Background_for_I_Can_See_Now.pdf','Background for &ldquo;I Can See Now&rdquo;',this); return false;">
+        &ldquo;I Can See Now&rdquo; Background
+      </a>
+    </div>
+
+    <!-- Viewer -->
+    <div class="pdf-toolbar">
+      <span class="pdf-label" id="event-label">Viewing: Current Events</span>
+      <a id="event-open" href="events/events.pdf" target="_blank" class="btn">Open in new tab ↗</a>
+    </div>
+    <iframe id="event-viewer" class="pdf-viewer" src="events/events.pdf" title="Events viewer"></iframe>
+    <p class="pdf-fallback">
+      PDF not loading?
+      <a id="event-fallback" href="events/events.pdf">Click here to open it directly.</a>
+    </p>
+
+  </main>
+
+  <footer>
+    <p>Henry Lunt Family Organization</p>
+    <p>Jay M. Jones, Web Page Content Manager</p>
+    <p>Copyright &copy; 2024 Jay M. Jones &mdash; All Rights Reserved</p>
+  </footer>
+
+  <script>
+    var activeEventLink = document.querySelector('#event-tabs a.active');
+
+    function loadEvent(path, label, el) {
+      document.getElementById('event-viewer').src    = path;
+      document.getElementById('event-open').href     = path;
+      document.getElementById('event-fallback').href = path;
+      document.getElementById('event-label').textContent = 'Viewing: ' + label;
+      if (activeEventLink) activeEventLink.classList.remove('active');
+      el.classList.add('active');
+      activeEventLink = el;
+    }
+  </script>
+
+</body>
+</html>

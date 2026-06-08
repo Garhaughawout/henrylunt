@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biography — Henry Lunt</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bio-layout {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .bio-sidebar {
+      flex-shrink: 0;
+      width: 195px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.8rem;
+      position: sticky;
+      top: 58px;
+      max-height: calc(100vh - 75px);
+      overflow-y: auto;
+      box-shadow: var(--shadow-sm);
+    }
+    .bio-sidebar h4 {
+      font-family: Arial, sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #999;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid #eee;
+    }
+    .bio-sidebar ul { list-style: none; }
+    .bio-sidebar ul li a {
+      display: block;
+      padding: 0.28rem 0.45rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.83rem;
+      border-radius: 3px;
+      transition: background 0.15s;
+      font-family: Arial, sans-serif;
+    }
+    .bio-sidebar ul li a:hover { background: #eef3fa; }
+    .bio-sidebar ul li a.active {
+      background: var(--light-blue);
+      color: var(--navy);
+      font-weight: bold;
+    }
+    .bio-main { flex: 1; min-width: 0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biography.html" class="active">Biography</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Biography of Henry Lunt</h1>
+    <p>A comprehensive life history spanning 30 chapters</p>
+  </div>
+
+  <main>
+
+    <p style="margin-bottom:1.5rem; color:#555; font-size:0.95rem;">
+      Select a chapter from the table of contents on the left. Each document opens in the viewer below.
+      Use the <strong>Open in new tab</strong> button to read full-screen or print.
+    </p>
+
+    <div class="bio-layout">
+
+      <aside class="bio-sidebar" aria-label="Biography chapters">
+        <h4>Contents</h4>
+        <ul>
+          <li><a href="#" onclick="loadBio('biography/start.pdf','Introduction'); return false;" id="link-start" class="active">Introduction</a></li>
+          <li><a href="#" onclick="loadBio('biography/table.pdf','Table of Contents'); return false;" id="link-table">Table of Contents</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch1.pdf','Chapter 1'); return false;"  id="link-ch1">Chapter 1</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch2.pdf','Chapter 2'); return false;"  id="link-ch2">Chapter 2</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch3.pdf','Chapter 3'); return false;"  id="link-ch3">Chapter 3</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch4.pdf','Chapter 4'); return false;"  id="link-ch4">Chapter 4</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch5.pdf','Chapter 5'); return false;"  id="link-ch5">Chapter 5</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch6.pdf','Chapter 6'); return false;"  id="link-ch6">Chapter 6</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch7.pdf','Chapter 7'); return false;"  id="link-ch7">Chapter 7</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch8.pdf','Chapter 8'); return false;"  id="link-ch8">Chapter 8</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch9.pdf','Chapter 9'); return false;"  id="link-ch9">Chapter 9</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch10.pdf','Chapter 10'); return false;" id="link-ch10">Chapter 10</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch11.pdf','Chapter 11'); return false;" id="link-ch11">Chapter 11</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch12.pdf','Chapter 12'); return false;" id="link-ch12">Chapter 12</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch13.pdf','Chapter 13'); return false;" id="link-ch13">Chapter 13</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch14.pdf','Chapter 14'); return false;" id="link-ch14">Chapter 14</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch15.pdf','Chapter 15'); return false;" id="link-ch15">Chapter 15</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch16.pdf','Chapter 16'); return false;" id="link-ch16">Chapter 16</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch17.pdf','Chapter 17'); return false;" id="link-ch17">Chapter 17</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch18.pdf','Chapter 18'); return false;" id="link-ch18">Chapter 18</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch19.pdf','Chapter 19'); return false;" id="link-ch19">Chapter 19</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch20.pdf','Chapter 20'); return false;" id="link-ch20">Chapter 20</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch21.pdf','Chapter 21'); return false;" id="link-ch21">Chapter 21</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch22.pdf','Chapter 22'); return false;" id="link-ch22">Chapter 22</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch23.pdf','Chapter 23'); return false;" id="link-ch23">Chapter 23</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch24.pdf','Chapter 24'); return false;" id="link-ch24">Chapter 24</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch25.pdf','Chapter 25'); return false;" id="link-ch25">Chapter 25</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch26.pdf','Chapter 26'); return false;" id="link-ch26">Chapter 26</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch27.pdf','Chapter 27'); return false;" id="link-ch27">Chapter 27</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch28.pdf','Chapter 28'); return false;" id="link-ch28">Chapter 28</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch29.pdf','Chapter 29'); return false;" id="link-ch29">Chapter 29</a></li>
+          <li><a href="#" onclick="loadBio('biography/ch30.pdf','Chapter 30'); return false;" id="link-ch30">Chapter 30</a></li>
+          <li><a href="#" onclick="loadBio('biography/grand.pdf','Grand Summary'); return false;" id="link-grand">Grand Summary</a></li>
+          <li><a href="#" onclick="loadBio('biography/end.pdf','Conclusion'); return false;" id="link-end">Conclusion</a></li>
+        </ul>
+      </aside>
+
+      <div class="bio-main">
+        <div class="pdf-toolbar">
+          <span class="pdf-label" id="bio-label">Viewing: Introduction</span>
+          <a id="bio-open" href="biography/start.pdf" target="_blank" class="btn">Open in new tab ↗</a>
+        </div>
+        <iframe id="bio-viewer" class="pdf-viewer" src="biography/start.pdf" title="Biography viewer"></iframe>
+        <p class="pdf-fallback">
+          PDF not loading?
+          <a id="bio-fallback" href="biography/start.pdf">Click here to open it directly.</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- About section -->
+    <h2>About This Biography</h2>
+    <div class="intro-box">
+      <p>This biography of Henry Lunt was compiled by the Henry Lunt Family Organization. It spans
+      30 chapters, tracing his life from birth in Cheshire, England in 1824 through his conversion
+      to the LDS faith, his emigration to America, decades of pioneer service in Cedar City, Utah,
+      and his final years in Colonia Pacheco, Mexico.</p>
+      <p>Also available:
+        <a href="HenryLunt-BriefLifeSketch.JPG" target="_blank">Brief Life Sketch (image)</a> &bull;
+        <a href="Henry_Lunt/Henry_Lunt_Letter_1852.docx">1852 Letter (Word document)</a>
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Henry Lunt Family Organization</p>
+    <p>Jay M. Jones, Web Page Content Manager</p>
+    <p>Copyright &copy; 2024 Jay M. Jones &mdash; All Rights Reserved</p>
+  </footer>
+
+  <script>
+    var activeBioLink = document.getElementById('link-start');
+
+    function loadBio(path, label) {
+      document.getElementById('bio-viewer').src   = path;
+      document.getElementById('bio-open').href    = path;
+      document.getElementById('bio-fallback').href = path;
+      document.getElementById('bio-label').textContent = 'Viewing: ' + label;
+      if (activeBioLink) activeBioLink.classList.remove('active');
+      var key = path.replace('biography/', '').replace('.pdf', '');
+      var el  = document.getElementById('link-' + key);
+      if (el) { el.classList.add('active'); activeBioLink = el; }
+    }
+  </script>
+
+</body>
+</html>
